@@ -1,0 +1,22 @@
+{
+  "name": "matchlearners",
+  "version": "1.0.0",
+  "description": "Projet dont l'objectif est de mettre en relation des particuliers pour qu'ils échangent leurs savoirs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pierre-Brieuc/matchLearners.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pierre-Brieuc/matchLearners/issues"
+  },
+  "homepage": "https://github.com/Pierre-Brieuc/matchLearners#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
