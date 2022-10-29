@@ -11,3 +11,13 @@ const authCheck = (req,res,next) =>{
         res.redirect('/login');
     }
 };
+
+const userCheck = (req,res,next)=>{
+    const token = req.cookies.jwt;
+    if(token){
+
+    }
+    else{
+        next();
+    }
+}
