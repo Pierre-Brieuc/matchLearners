@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
+const {render} = require('ejs')
 
-
-
+const maxAge = 1800;
 
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
         res.render('login');
     },
     async postSignup(req,res){
-        const {mail,password}=req.body;
+        const {mail,passwordz} = req.body;
 
         try {
             
@@ -24,11 +24,12 @@ module.exports = {
     },
 
     async postLogin(req,res){
-
+        const {mail,password}= req.body;
         try {
             
         } catch (error) {
-            
+            console.error('Could not login, check for the credentials ', error);
+            res.status(400);
         }
     },
     getLogout(req,res){

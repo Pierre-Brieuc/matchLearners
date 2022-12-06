@@ -6,6 +6,7 @@ DROP TABLE if exists users;
 CREATE TABLE users (
 	idUser int primary key,
     userDateCreation Date,
+    password varchar(36) not null,
     lastname varchar(30) not null,
     firstname varchar(30) not null,
     age int not null,
