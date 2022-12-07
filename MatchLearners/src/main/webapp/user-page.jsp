@@ -16,8 +16,6 @@
         <title>${name}</title>
         <link href="css/instructor.css" type="text/css" rel="stylesheet">
     </head>
-    <% List<Post> theposts = (List<Post>)request.getAttribute("POST_LIST"); %>
-    <% int user_id = (int)request.getAttribute("user_id");%>
     <body>
         <center>
             <div class="titre">
@@ -33,8 +31,8 @@
             <div id="container">
                 <div id="content">
                     <table>
+                        <%int i=0;%>
                         <c:forEach var="tempPost" items="${POST_LIST}" >
-                        <%for (int i=0;i<theposts.size();i++){%>
                             <tr>
                                 <form>
                                     <input type="hidden" name="name" value="${name}">
@@ -45,20 +43,24 @@
                                     <td><input type="hidden" class="description1" name="description" value="${tempPost.description}"/><center>${tempPost.description}</center></td>
 
                                     <td><input type="hidden" class="description1" name="idUser" value="${tempPost.idUser}"/><center>${tempPost.idUser}</center></td>
-                                    <%if (theposts.get(i).getIdUser() == user_id)%>
-                                        <td colspan="2"><input type="submit" class="edit" value="Edit" formmethod="get" formaction="edit-todo-servlet"></td>
-                                        <td><input type="submit" class="delete" value="Delete" formmethod="post" formaction="delete-todo-servlet"></td>
-                                    <%};%>
+                                    <c:choose>
+                                        <c:when test="${tempPost.idUser == id_user}">
+                                            <td colspan="2"><input type="submit" class="edit" value="Edit" formmethod="get" formaction="edit-post-servlet"></td>
+                                            <td><input type="submit" class="delete" value="Delete" formmethod="post" formaction="delete-post-servlet"></td>
+                                        </c:when>
+                                        <c:when test="${tempPost.idUser != id_user}">
+                                            <td><input type="submit" class="delete" value="Like" formmethod="post" formaction="like-post-servlet"></td>
+                                        </c:when>
+                                    </c:choose>
                                 </form>
                             </tr>
-                        <%};%>
                         </c:forEach>
                     </table>
                 </div>
             </div>
-            <form action="create-todo-servlet">
+            <form action="create-post-servlet">
                 <input type="hidden" name="name" value="${name}">
-                <input class="newtodo" type="submit" value="create new todo" formmethod="get"/>
+                <input class="newtodo" type="submit" value="create new post" formmethod="get"/>
             </form>
         </center>
     </body>

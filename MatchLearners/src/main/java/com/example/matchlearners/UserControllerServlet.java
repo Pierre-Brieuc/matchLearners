@@ -52,7 +52,7 @@ public class UserControllerServlet extends HttpServlet {
         try {
             String username = req.getParameter("username");
             req.setAttribute("name", username);
-            System.out.println(req.getParameter("id_user"));
+            System.out.println(req.getAttribute("id_user"));
             int user_id = Integer.parseInt(req.getParameter("id_user"));
             req.setAttribute("id_user", user_id);
             this.listPosts(req, resp);
@@ -66,18 +66,17 @@ public class UserControllerServlet extends HttpServlet {
         List<Post> posts = this.userDBUtil.getPosts();
         request.setAttribute("POST_LIST", posts);
         String username = request.getParameter("username");
-        System.out.println(request.getParameter("id_user"));
-        int user_id = Integer.parseInt(request.getParameter("id_user"));
-        request.setAttribute("name", username);
+        int user_id = (int) request.getAttribute("id_user");
         request.setAttribute("id_user", user_id);
+        request.setAttribute("name", username);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user-page.jsp");
         dispatcher.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            System.out.println(req.getParameter("id_user"));
-            int user_id = Integer.parseInt(req.getParameter("id_user"));
+            System.out.println(req.getAttribute("id_user"));
+            int user_id = (int) req.getAttribute("id_user");
             req.setAttribute("id_user", user_id);
             this.listPosts(req, resp);
         } catch (Exception var4) {
