@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 @WebServlet(
-        name = "deleteTodoServlet",
-        value = {"/delete-todo-servlet"}
+        name = "deletePostServlet",
+        value = {"/delete-post-servlet"}
 )
 public class DeletePostServlet extends HttpServlet {
     private DataSource dataSource;
@@ -51,14 +51,16 @@ public class DeletePostServlet extends HttpServlet {
         try {
             String name_account = req.getParameter("name");
             req.setAttribute("name", name_account);
-            this.listTodos(req, resp);
+            int idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            req.setAttribute("idConnectedUser", idConnectedUser);
+            this.listPosts(req, resp);
         } catch (Exception var4) {
             var4.printStackTrace();
         }
 
     }
 
-    private void listTodos(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void listPosts(HttpServletRequest request, HttpServletResponse response) throws Exception {
         List<Post> posts = this.userDBUtil.getPosts();
         request.setAttribute("POST_LIST", posts);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user-page.jsp");
@@ -66,20 +68,22 @@ public class DeletePostServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String idTodo = req.getParameter("id");
+        String idPost = req.getParameter("id");
         Connection myConn = null;
         PreparedStatement preparedStmt = null;
 
         try {
             this.dataSource = this.getDataSource();
             myConn = this.dataSource.getConnection();
-            String query = "DELETE FROM todo WHERE id_post=?";
+            String query = "DELETE FROM post WHERE id_post=?";
             preparedStmt = myConn.prepareStatement(query);
-            preparedStmt.setString(1, idTodo);
+            preparedStmt.setString(1, idPost);
             preparedStmt.execute();
             this.close(myConn, (Statement)null, preparedStmt, (ResultSet)null);
             String name_account = req.getParameter("name");
             req.setAttribute("name", name_account);
+            int idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            req.setAttribute("idConnectedUser", idConnectedUser);
             req.getRequestDispatcher("user-controller-servlet").forward(req, resp);
         } catch (Exception var8) {
             System.out.println(var8.getMessage());

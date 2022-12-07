@@ -51,6 +51,8 @@ public class CreatePostServlet extends HttpServlet {
         req.setAttribute("id", tempId);
         req.setAttribute("description", tempDesc);
         req.setAttribute("name", name_account);
+        int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+        req.setAttribute("idConnectedUser", idConnectedUser);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/create-post.jsp");
         dispatcher.forward(req, resp);
     }
@@ -72,6 +74,8 @@ public class CreatePostServlet extends HttpServlet {
                 preparedStmt.executeUpdate();
                 String name_account = req.getParameter("name");
                 req.setAttribute("name", name_account);
+                int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+                req.setAttribute("idConnectedUser", idConnectedUser);
                 req.getRequestDispatcher("user-controller-servlet").forward(req, resp);
             } catch (Exception var12) {
                 System.out.println(var12.getMessage());

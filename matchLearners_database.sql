@@ -22,6 +22,7 @@ CREATE TABLE if not exists post (
     FOREIGN KEY (id_user) REFERENCES users(id_user)
 );
 
+select * from users;
 INSERT INTO post VALUES (1,"Help","Need a lot of help",2);
 INSERT INTO post VALUES (2,"Gardening","I want to learn some gardening skills",1);
 INSERT INTO post VALUES (3,"Housekeeping","Need a lot of help",3);

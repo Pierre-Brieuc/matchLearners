@@ -53,12 +53,14 @@ public class EditPostServlet extends HttpServlet {
         req.setAttribute("id", tempId);
         req.setAttribute("description", tempDesc);
         req.setAttribute("name", name_account);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/edit-todo.jsp");
+        int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+        req.setAttribute("idConnectedUser", idConnectedUser);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/edit-post.jsp");
         dispatcher.forward(req, resp);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String idTodo = req.getParameter("id");
+        String idPost = req.getParameter("id");
         String newDescription = req.getParameter("description");
         if (!newDescription.equals("")) {
             Connection myConn = null;
@@ -70,10 +72,12 @@ public class EditPostServlet extends HttpServlet {
                 String query = "UPDATE post SET description=? WHERE id_post=?";
                 preparedStmt = myConn.prepareStatement(query);
                 preparedStmt.setString(1, newDescription);
-                preparedStmt.setString(2, idTodo);
+                preparedStmt.setString(2, idPost);
                 preparedStmt.executeUpdate();
                 String name_account = req.getParameter("name");
                 req.setAttribute("name", name_account);
+                int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+                req.setAttribute("idConnectedUser", idConnectedUser);
                 req.getRequestDispatcher("user-controller-servlet").forward(req, resp);
             } catch (Exception var12) {
                 System.out.println(var12.getMessage());

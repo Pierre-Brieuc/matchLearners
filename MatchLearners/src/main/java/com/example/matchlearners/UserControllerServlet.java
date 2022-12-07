@@ -52,9 +52,8 @@ public class UserControllerServlet extends HttpServlet {
         try {
             String username = req.getParameter("username");
             req.setAttribute("name", username);
-            System.out.println(req.getAttribute("id_user"));
-            int user_id = Integer.parseInt(req.getParameter("id_user"));
-            req.setAttribute("id_user", user_id);
+            int idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            req.setAttribute("idConnectedUser", idConnectedUser);
             this.listPosts(req, resp);
         } catch (Exception var5) {
             var5.printStackTrace();
@@ -66,18 +65,19 @@ public class UserControllerServlet extends HttpServlet {
         List<Post> posts = this.userDBUtil.getPosts();
         request.setAttribute("POST_LIST", posts);
         String username = request.getParameter("username");
-        int user_id = (int) request.getAttribute("id_user");
-        request.setAttribute("id_user", user_id);
+        int idConnectedUser = (int) request.getAttribute("idConnectedUser");
+        request.setAttribute("idConnectedUser", idConnectedUser);
         request.setAttribute("name", username);
+        System.out.println("2 : "+request.getAttribute("idConnectedUser"));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user-page.jsp");
         dispatcher.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            System.out.println(req.getAttribute("id_user"));
-            int user_id = (int) req.getAttribute("id_user");
-            req.setAttribute("id_user", user_id);
+            System.out.println("1 : "+req.getAttribute("idConnectedUser"));
+            int idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            req.setAttribute("idConnectedUser", idConnectedUser);
             this.listPosts(req, resp);
         } catch (Exception var4) {
             var4.printStackTrace();

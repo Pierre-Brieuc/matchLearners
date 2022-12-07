@@ -92,8 +92,7 @@ public class LoginServlet extends HttpServlet {
                     resp.addCookie(cookie);
                     HttpSession session = req.getSession();
                     isGood = true;
-                    System.out.println(myRs.getInt("id_user"));
-                    req.setAttribute("id_user", myRs.getInt("id_user"));
+                    req.setAttribute("idConnectedUser", myRs.getInt("id_user"));
                     req.setAttribute("username", nameToCheck);
                     req.getRequestDispatcher("user-controller-servlet").forward(req, resp);
                 }

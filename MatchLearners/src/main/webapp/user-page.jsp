@@ -14,7 +14,8 @@
 <html>
     <head>
         <title>${name}</title>
-        <link href="css/instructor.css" type="text/css" rel="stylesheet">
+        <link href="css/user.css" type="text/css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>
     <body>
         <center>
@@ -23,14 +24,14 @@
             </div>
 
             <div class="logout">
-                <form action="logout-servlet" method="get">
+                <form action="logout-servlet" class="mb-2" method="get">
                     <input type="submit" value="Log out"/>
                 </form>
             </div>
 
             <div id="container">
                 <div id="content">
-                    <table>
+                    <table class="table table-sm">
                         <%int i=0;%>
                         <c:forEach var="tempPost" items="${POST_LIST}" >
                             <tr>
@@ -43,12 +44,15 @@
                                     <td><input type="hidden" class="description1" name="description" value="${tempPost.description}"/><center>${tempPost.description}</center></td>
 
                                     <td><input type="hidden" class="description1" name="idUser" value="${tempPost.idUser}"/><center>${tempPost.idUser}</center></td>
+
+                                    <input type="hidden" class="description1" name="idConnectedUser" value="${idConnectedUser}"/>
+
                                     <c:choose>
-                                        <c:when test="${tempPost.idUser == id_user}">
+                                        <c:when test="${tempPost.idUser == idConnectedUser}">
                                             <td colspan="2"><input type="submit" class="edit" value="Edit" formmethod="get" formaction="edit-post-servlet"></td>
                                             <td><input type="submit" class="delete" value="Delete" formmethod="post" formaction="delete-post-servlet"></td>
                                         </c:when>
-                                        <c:when test="${tempPost.idUser != id_user}">
+                                        <c:when test="${tempPost.idUser != idConnectedUser}">
                                             <td><input type="submit" class="delete" value="Like" formmethod="post" formaction="like-post-servlet"></td>
                                         </c:when>
                                     </c:choose>
