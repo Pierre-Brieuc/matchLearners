@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="MatchLearners:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84d81999-2c6b-4680-8ea6-f4b7bfcb4d6f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/CreatePostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/CreatePostServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/DeletePostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/DeletePostServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/EditPostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/EditPostServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/LikePostServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/LikePostServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/UserControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/UserControllerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/UserDBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/matchlearners/UserDBUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/edit-post.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/edit-post.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user-page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user-page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__javax_el_javax_el_api_3_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__javax_enterprise_cdi_api_2_0_SP1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__javax_interceptor_javax_interceptor_api_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/libraries/javax_servlet_jstl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/WebToDoList.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/CreatePostServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/DeletePostServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/EditPostServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/Post.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/RegistrationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/UserControllerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/matchlearners/UserDBUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/Account.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/CreateTodoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/DeleteTodoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/EditTodoServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/Instructor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/InstructorControllerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/RegistrationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/StudentControllerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/Todo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/classes/com/example/webtodolist/TodoDBUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/WebToDoList-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/CreatePostServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/DeletePostServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/EditPostServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/Post.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/RegistrationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/UserControllerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebToDoList/target/classes/com/example/matchlearners/UserDBUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/authentication.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/global.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../controllers/profile.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/controllers/authentication.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/controllers/global.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/controllers/profile.controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/matchLearners_database.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/middlewares/authentication.middleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/prisma/schema.prisma" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/routes/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners-main/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../matchLearners_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../matchLearners_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middlewares/authentication.middleware.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../prisma/schema.prisma" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../signup.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IZr6UgE4WkPjJJ3gBKk5eVDp5E" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PierreB\Documents\GitHub\matchLearners\MatchLearners\src\main\webapp" />
+      <recent name="C:\Users\PierreB\Documents\GitHub\matchLearners\MatchLearners\src\main\resources" />
+      <recent name="C:\Users\PierreB\Documents\GitHub\matchLearners\MatchLearners\src\main\resources\WEB-INF" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.69" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.69" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="MatchLearners:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/MatchLearners_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="c741e488-24c1-4726-b96c-435f0b333069" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63302" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="MatchLearners:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84d81999-2c6b-4680-8ea6-f4b7bfcb4d6f" name="Changes" comment="" />
+      <created>1670399773089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670399773089</updated>
+      <workItem from="1670399774797" duration="10868000" />
+      <workItem from="1670435359711" duration="8946000" />
+      <workItem from="1670581920501" duration="664000" />
+      <workItem from="1672347547607" duration="7975000" />
+      <workItem from="1672494404616" duration="10565000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
