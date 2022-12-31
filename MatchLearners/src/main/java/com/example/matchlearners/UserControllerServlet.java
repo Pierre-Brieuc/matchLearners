@@ -68,6 +68,8 @@ public class UserControllerServlet extends HttpServlet {
 
     private void listPosts(HttpServletRequest request, HttpServletResponse response) throws Exception {
         List<Post> posts = this.userDBUtil.getPosts();
+        List<User> users = this.userDBUtil.getUsers();
+        request.setAttribute("USER_LIST", users);
         request.setAttribute("POST_LIST", posts);
         String username = request.getParameter("username");
         int idConnectedUser = 0;
@@ -88,11 +90,11 @@ public class UserControllerServlet extends HttpServlet {
                 idConnectedUser = (int) req.getAttribute("idConnectedUser");
             } else {
                 idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
-            }            req.setAttribute("idConnectedUser", idConnectedUser);
+            }
+            req.setAttribute("idConnectedUser", idConnectedUser);
             this.listPosts(req, resp);
         } catch (Exception var4) {
             var4.printStackTrace();
         }
-
     }
 }

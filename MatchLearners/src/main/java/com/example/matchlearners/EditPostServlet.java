@@ -62,6 +62,7 @@ public class EditPostServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String idPost = req.getParameter("id");
         String newDescription = req.getParameter("description");
+        System.out.println(newDescription);
         if (!newDescription.equals("")) {
             Connection myConn = null;
             PreparedStatement preparedStmt = null;

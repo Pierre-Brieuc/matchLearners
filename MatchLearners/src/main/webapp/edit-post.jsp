@@ -32,10 +32,11 @@
                             <form id="editPost-form" class="form" action="edit-post-servlet" method="post">
                                 <input type="hidden" name="name" value="${name}">
                                 <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
+                                <td><input type="hidden" class="input-user" name="id" value="${id}"/></td>
                                 <h3 class="text-center text-info">Edit</h3>
                                 <div class="form-group">
-                                    <label for="desc" class="text-info">Description :</label><br>
-                                    <input type="text" name="desc" id="desc" class="form-control" value="${description}" required>
+                                    <label for="description" class="text-info">Description :</label><br>
+                                    <input type="text" name="description" id="description" class="form-control" value="${description}" required>
                                 </div>
                                 <div class="form-group">
                                     <center><input type="submit" name="submit" class="btn btn-info btn-md mt-2" value="submit"></center>

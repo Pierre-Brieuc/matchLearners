@@ -62,6 +62,8 @@ public class DeletePostServlet extends HttpServlet {
     private void listPosts(HttpServletRequest request, HttpServletResponse response) throws Exception {
         List<Post> posts = this.userDBUtil.getPosts();
         request.setAttribute("POST_LIST", posts);
+        List<User> users = this.userDBUtil.getUsers();
+        request.setAttribute("USER_LIST", users);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user-page.jsp");
         dispatcher.forward(request, response);
     }

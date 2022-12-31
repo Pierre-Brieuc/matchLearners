@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -61,17 +62,30 @@ public class CreatePostServlet extends HttpServlet {
         String newDescription = req.getParameter("description");
         String newTitle = req.getParameter("title");
         int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+        List<User> users = null;
+        String username = "";
+        try {
+            users = userDBUtil.getUsers();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        for (User temp: users) {
+            if (temp.getIdUser() == idConnectedUser){
+                username = temp.getUsername();
+            }
+        }
         if (!newDescription.equals("")) {
             Connection myConn = null;
             PreparedStatement preparedStmt = null;
             try {
                 this.dataSource = this.getDataSource();
                 myConn = this.dataSource.getConnection();
-                String query = "INSERT INTO post(title,description,id_user,is_liked) VALUES (?,?,?,0)";
+                String query = "INSERT INTO post(title,description,id_user,username,is_liked) VALUES (?,?,?,?,0)";
                 preparedStmt = myConn.prepareStatement(query);
                 preparedStmt.setString(1, newTitle);
                 preparedStmt.setString(2, newDescription);
                 preparedStmt.setInt(3, idConnectedUser);
+                preparedStmt.setString(4, username);
                 preparedStmt.executeUpdate();
                 String name_account = req.getParameter("name");
                 req.setAttribute("name", name_account);

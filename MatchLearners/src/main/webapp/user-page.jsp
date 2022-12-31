@@ -20,7 +20,7 @@
     <body>
         <center>
             <div class="titre">
-                <span class="titre1">Bonjour ${name}</span>
+                <span class="titre1">Bonjour</span>
             </div>
 
             <div class="logout">
@@ -43,7 +43,7 @@
 
                                     <td><input type="hidden" class="description1" name="description" value="${tempPost.description}"/><center>${tempPost.description}</center></td>
 
-                                    <td><input type="hidden" class="idUser" name="idUser" value="${tempPost.idUser}"/><center>${tempPost.idUser}</center></td>
+                                    <td><input type="hidden" class="username" name="username" value="${tempPost.username}"/><center>${tempPost.username}</center></td>
 
                                     <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
 
