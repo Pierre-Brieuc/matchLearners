@@ -15,49 +15,19 @@
     <% String errorMessage = (String)request.getAttribute("ERROR"); %>
 
     <body>
-    <center>
-        <div>
-            <h1>Create your post</h1>
-        </div>
-        <form method="POST" action="create-post-servlet">
-            <input type="hidden" name="name" value="${name}">
-            <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
-
-            <table align="center">
-                <tr>
-                    <td>Description :</td>
-                    <td><input type="text" name="description" value=""></td>
-                </tr>
-                <!-- ${ERROR}-->
-                <%if (errorMessage != null){%>
-                <p><%=errorMessage%></p>
-                <%};%>
-                <tr>
-                    <td colspan="2"><input type="submit" value="Save"></td>
-                    <td><input type="reset" value="Cancel"></td>
-                </tr>
-            </table>
-        </form>
-        <form action="user-controller-servlet" method="get">
-            <input type="hidden" name="name" value="${name}">
-            <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
-            <input type="submit" value="Back">
-        </form>
-    </center>
         <div id="create">
-            <h3 class="text-center text-white pt-5">Edit</h3>
             <div class="container">
-                <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
-                        <div id="login-box" class="col-md-12">
+                <div id="createPost-row" class="row justify-content-center align-items-center">
+                    <div id="createPost-column" class="col-md-6">
+                        <div id="createPost-box" class="col-md-12">
                             <!-- ${ERROR}-->
                             <%if (errorMessage != null){%>
                             <p><%=errorMessage%></p>
                             <%};%>
-                            <form id="create-form" class="form" action="create-post-servlet" method="post">
+                            <form id="createPost-form" class="form" action="create-post-servlet" method="post">
                                 <input type="hidden" name="name" value="${name}">
                                 <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
-                                <h3 class="text-center text-info">Create</h3>
+                                <h3 class="text-center text-info">Create your post</h3>
                                 <div class="form-group">
                                     <label for="title" class="text-info">Title :</label><br>
                                     <input type="text" name="title" id="title" class="form-control" value="${title}" required>

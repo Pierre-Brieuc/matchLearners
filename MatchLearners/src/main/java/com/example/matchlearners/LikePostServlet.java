@@ -1,11 +1,5 @@
 package com.example.matchlearners;
 
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -16,28 +10,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
 
 @WebServlet(
-        name = "deletePostServlet",
-        value = {"/delete-post-servlet"}
+        name = "likePostServlet",
+        value = {"/like-post-servlet"}
 )
-public class DeletePostServlet extends HttpServlet {
+public class LikePostServlet extends HttpServlet {
     private DataSource dataSource;
     private UserDBUtil userDBUtil;
 
-    public DeletePostServlet() {
+    public LikePostServlet() {
     }
 
     public void init() throws ServletException {
         super.init();
-
         try {
             this.dataSource = this.getDataSource();
             this.userDBUtil = new UserDBUtil(this.dataSource);
         } catch (NamingException var2) {
             var2.printStackTrace();
         }
-
     }
 
     private DataSource getDataSource() throws NamingException {
@@ -68,12 +66,18 @@ public class DeletePostServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String idPost = req.getParameter("id");
+        int isLiked = Integer.parseInt(req.getParameter("isLiked"));
         Connection myConn = null;
         PreparedStatement preparedStmt = null;
         try {
             this.dataSource = this.getDataSource();
             myConn = this.dataSource.getConnection();
-            String query = "DELETE FROM post WHERE id_post=?";
+            String query = "";
+            if (isLiked == 0) {
+                query = "UPDATE post SET is_liked=1 WHERE id_post=?";
+            } else if (isLiked == 1) {
+                query = "UPDATE post SET is_liked=0 WHERE id_post=?";
+            }
             preparedStmt = myConn.prepareStatement(query);
             preparedStmt.setString(1, idPost);
             preparedStmt.execute();
@@ -110,6 +114,5 @@ public class DeletePostServlet extends HttpServlet {
         } catch (Exception var6) {
             System.out.println(var6.getMessage());
         }
-
     }
 }

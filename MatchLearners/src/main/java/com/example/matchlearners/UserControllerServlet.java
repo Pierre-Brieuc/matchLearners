@@ -52,7 +52,12 @@ public class UserControllerServlet extends HttpServlet {
         try {
             String username = req.getParameter("username");
             req.setAttribute("name", username);
-            int idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            int idConnectedUser = 0;
+            if (req.getAttribute("idConnectedUser") != null){
+                idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            } else {
+                idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+            }
             req.setAttribute("idConnectedUser", idConnectedUser);
             this.listPosts(req, resp);
         } catch (Exception var5) {
@@ -65,19 +70,25 @@ public class UserControllerServlet extends HttpServlet {
         List<Post> posts = this.userDBUtil.getPosts();
         request.setAttribute("POST_LIST", posts);
         String username = request.getParameter("username");
-        int idConnectedUser = (int) request.getAttribute("idConnectedUser");
-        request.setAttribute("idConnectedUser", idConnectedUser);
+        int idConnectedUser = 0;
+        if (request.getAttribute("idConnectedUser") != null){
+            idConnectedUser = (int) request.getAttribute("idConnectedUser");
+        } else {
+            idConnectedUser = Integer.parseInt(request.getParameter("idConnectedUser"));
+        }        request.setAttribute("idConnectedUser", idConnectedUser);
         request.setAttribute("name", username);
-        System.out.println("2 : "+request.getAttribute("idConnectedUser"));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/user-page.jsp");
         dispatcher.forward(request, response);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            System.out.println("1 : "+req.getAttribute("idConnectedUser"));
-            int idConnectedUser = (int) req.getAttribute("idConnectedUser");
-            req.setAttribute("idConnectedUser", idConnectedUser);
+            int idConnectedUser = 0;
+            if (req.getAttribute("idConnectedUser") != null){
+                idConnectedUser = (int) req.getAttribute("idConnectedUser");
+            } else {
+                idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
+            }            req.setAttribute("idConnectedUser", idConnectedUser);
             this.listPosts(req, resp);
         } catch (Exception var4) {
             var4.printStackTrace();

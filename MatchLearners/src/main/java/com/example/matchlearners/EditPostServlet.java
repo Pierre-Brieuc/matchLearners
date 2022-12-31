@@ -65,7 +65,6 @@ public class EditPostServlet extends HttpServlet {
         if (!newDescription.equals("")) {
             Connection myConn = null;
             PreparedStatement preparedStmt = null;
-
             try {
                 this.dataSource = this.getDataSource();
                 myConn = this.dataSource.getConnection();

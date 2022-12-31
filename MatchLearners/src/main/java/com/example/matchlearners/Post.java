@@ -5,18 +5,21 @@ public class Post {
     private String title;
     private String description;
     private int idUser;
+    private int isLiked;
 
-    public Post(int idPost, String title, String description, int idUser) {
+    public Post(int idPost, String title, String description, int idUser, int isLiked) {
         this.idPost = idPost;
         this.title = title;
         this.description = description;
         this.idUser = idUser;
+        this.isLiked = isLiked;
     }
 
-    public Post(String title, String description, int idUser) {
+    public Post(String title, String description, int idUser, int isLiked) {
         this.title = title;
         this.description = description;
         this.idUser = idUser;
+        this.isLiked = isLiked;
     }
 
     public int getIdPost() {
@@ -49,5 +52,12 @@ public class Post {
 
     public void setIdUser(int idUser) {
         this.idUser = idUser;
+    }
+    public int getIsLiked() {
+        return this.isLiked;
+    }
+
+    public void setIsLiked(int isLiked) {
+        this.isLiked = isLiked;
     }
 }

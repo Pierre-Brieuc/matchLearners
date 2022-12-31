@@ -22,20 +22,20 @@
         <div id="edit">
             <h3 class="text-center text-white pt-5">Edit</h3>
             <div class="container">
-                <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
-                        <div id="login-box" class="col-md-12">
+                <div id="editPost-row" class="row justify-content-center align-items-center">
+                    <div id="editPost-column" class="col-md-6">
+                        <div id="editPost-box" class="col-md-12">
                             <!-- ${ERROR}-->
                             <%if (errorMessage != null){%>
                             <p><%=errorMessage%></p>
                             <%};%>
-                            <form id="edit-form" class="form" action="edit-post-servlet" method="post">
+                            <form id="editPost-form" class="form" action="edit-post-servlet" method="post">
                                 <input type="hidden" name="name" value="${name}">
                                 <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
                                 <h3 class="text-center text-info">Edit</h3>
                                 <div class="form-group">
-                                    <label for="username" class="text-info">Description :</label><br>
-                                    <input type="text" name="j_username" id="username" class="form-control" value="${description}" required>
+                                    <label for="desc" class="text-info">Description :</label><br>
+                                    <input type="text" name="desc" id="desc" class="form-control" value="${description}" required>
                                 </div>
                                 <div class="form-group">
                                     <center><input type="submit" name="submit" class="btn btn-info btn-md mt-2" value="submit"></center>

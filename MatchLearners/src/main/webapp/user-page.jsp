@@ -37,15 +37,17 @@
                             <tr>
                                 <form>
                                     <input type="hidden" name="name" value="${name}">
-                                    <td><input type="hidden" class="input-instructor" name="id" value="${tempPost.idPost}"/></td>
+                                    <td><input type="hidden" class="input-user" name="id" value="${tempPost.idPost}"/></td>
 
-                                    <td><input type="hidden" class="input-instructor" name="title" value="${tempPost.title}"/><center>${tempPost.title}</center></td>
+                                    <td><input type="hidden" class="input-user" name="title" value="${tempPost.title}"/><center>${tempPost.title}</center></td>
 
                                     <td><input type="hidden" class="description1" name="description" value="${tempPost.description}"/><center>${tempPost.description}</center></td>
 
-                                    <td><input type="hidden" class="description1" name="idUser" value="${tempPost.idUser}"/><center>${tempPost.idUser}</center></td>
+                                    <td><input type="hidden" class="idUser" name="idUser" value="${tempPost.idUser}"/><center>${tempPost.idUser}</center></td>
 
-                                    <input type="hidden" class="description1" name="idConnectedUser" value="${idConnectedUser}"/>
+                                    <input type="hidden" name="idConnectedUser" value="${idConnectedUser}"/>
+
+                                    <input type="hidden" class="input-user" name="isLiked" value="${tempPost.isLiked}"/>
 
                                     <c:choose>
                                         <c:when test="${tempPost.idUser == idConnectedUser}">
@@ -53,7 +55,14 @@
                                             <td><input type="submit" class="delete" value="Delete" formmethod="post" formaction="delete-post-servlet"></td>
                                         </c:when>
                                         <c:when test="${tempPost.idUser != idConnectedUser}">
-                                            <td><input type="submit" class="delete" value="Like" formmethod="post" formaction="like-post-servlet"></td>
+                                            <c:choose>
+                                                <c:when test="${tempPost.isLiked==0}">
+                                                    <td><input type="submit" class="delete" value="Like" formmethod="post" formaction="like-post-servlet"></td>
+                                                </c:when>
+                                                <c:when test="${tempPost.isLiked==1}">
+                                                    <td><input type="submit" class="delete bg-success" value="Liked" formmethod="post" formaction="like-post-servlet"></td>
+                                                </c:when>
+                                            </c:choose>
                                         </c:when>
                                     </c:choose>
                                 </form>
@@ -64,7 +73,8 @@
             </div>
             <form action="create-post-servlet">
                 <input type="hidden" name="name" value="${name}">
-                <input class="newtodo" type="submit" value="create new post" formmethod="get"/>
+                <input type="hidden" name="idConnectedUser" value="${idConnectedUser}">
+                <input class="newPost" type="submit" value="create new post" formmethod="get"/>
             </form>
         </center>
     </body>

@@ -32,7 +32,8 @@ public class UserDBUtil {
                 String postTitle = myRs.getString("title");
                 String postDescription = myRs.getString("description");
                 int newIdUser = myRs.getInt("id_user");
-                Post tempPost = new Post(newIdPost, postTitle, postDescription, newIdUser);
+                int isLiked = myRs.getInt("is_liked");
+                Post tempPost = new Post(newIdPost, postTitle, postDescription, newIdUser, isLiked);
                 posts.add(tempPost);
             }
 

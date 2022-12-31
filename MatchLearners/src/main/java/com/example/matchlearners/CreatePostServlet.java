@@ -60,21 +60,21 @@ public class CreatePostServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String newDescription = req.getParameter("description");
         String newTitle = req.getParameter("title");
+        int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
         if (!newDescription.equals("")) {
             Connection myConn = null;
             PreparedStatement preparedStmt = null;
-
             try {
                 this.dataSource = this.getDataSource();
                 myConn = this.dataSource.getConnection();
-                String query = "INSERT INTO post(title,description) VALUES (?,?)";
+                String query = "INSERT INTO post(title,description,id_user,is_liked) VALUES (?,?,?,0)";
                 preparedStmt = myConn.prepareStatement(query);
                 preparedStmt.setString(1, newTitle);
                 preparedStmt.setString(2, newDescription);
+                preparedStmt.setInt(3, idConnectedUser);
                 preparedStmt.executeUpdate();
                 String name_account = req.getParameter("name");
                 req.setAttribute("name", name_account);
-                int idConnectedUser = Integer.parseInt(req.getParameter("idConnectedUser"));
                 req.setAttribute("idConnectedUser", idConnectedUser);
                 req.getRequestDispatcher("user-controller-servlet").forward(req, resp);
             } catch (Exception var12) {
