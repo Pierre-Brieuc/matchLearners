@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -84,6 +85,17 @@ public class RegistrationServlet extends HttpServlet {
                         this.close(myConn, (Statement)null, preparedStmt, (ResultSet)null);
                         HttpSession session = req.getSession();
                         req.setAttribute("name", newName);
+                        UserDBUtil userDBUtil = new UserDBUtil(this.dataSource);
+                        List<User> users = userDBUtil.getUsers();
+                        int idNewUser = 0;
+                        int i = 0;
+                        while (i<users.size()){
+                            if (newName == users.get(i).getUsername()){
+                                idNewUser = users.get(i).getIdUser();
+                            }
+                            i++;
+                        }
+                        req.setAttribute("idConnectedUser", idNewUser);
                         req.getRequestDispatcher("/user-controller-servlet").forward(req, resp);
                     } catch (Exception var10) {
                         System.out.println(var10.getMessage());

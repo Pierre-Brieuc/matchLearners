@@ -66,6 +66,7 @@ public class UserDBUtil {
         }
     }
 
+
     private void close(Connection myConn, Statement myStmt, ResultSet myRs, PreparedStatement pStmt) {
         try {
             if (myStmt != null) {
