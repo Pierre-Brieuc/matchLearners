@@ -17,9 +17,8 @@ CREATE TABLE if not exists admin (
 CREATE TABLE if not exists post (
 	id_post INT PRIMARY KEY auto_increment,
     title VARCHAR(50) NOT NULL,
-	description VARCHAR (50) NOT NULL,
+	description VARCHAR (500) NOT NULL,
     id_user INT NOT NULL,
-    FOREIGN KEY (id_user) REFERENCES users(id_user),
 	username VARCHAR(50) NOT NULL,
     is_liked int NOT NULL
 );
@@ -34,3 +33,4 @@ INSERT INTO post VALUES (3,"Housekeeping","Need a lot of help",3,"Luc",0);
 INSERT INTO post VALUES (4,"Homework","Need help for maths skills",2,"Jeanne",0);
 
 select * from post;
+select * from users;
